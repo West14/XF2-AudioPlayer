@@ -1,0 +1,40 @@
+<xf:js src="west/audioplayer/vendor/howler.js" min="1" addon="West/AudioPlayer" />
+<xf:js src="west/audioplayer/player.js" min="1" addon="West/AudioPlayer" />
+
+<xf:css src="widget_wap_audio_player.less" />
+
+<xf:set var="$firstSong" value="{$songList|first}" />
+
+<div class="block block-audioPlayer"{{ widget_data($widget) }}>
+	<div class="block-container">
+		<h3 class="block-minorHeader menuTrigger" 
+			data-xf-click="menu" 
+			role="button" 
+			tabindex="0" 
+			aria-expanded="false" 
+			aria-haspopup="true">
+			{$firstSong.title}
+		</h3>
+		<div class="menu" data-menu="menu" aria-hidden="true">
+			<div class="menu-content">
+				<xf:foreach loop="$songList" value="$song" key="$songId">
+					<span class="menu-linkRow" data-song-id="{$songId}" data-song-url="{$song.url}">{$song.title}</span>
+				</xf:foreach>
+			</div>
+		</div>
+		
+		<div class="block-body">
+			<div class="block-row player-playbackControls">
+				<div class="playbackControls playbackControls-prev"></div>
+				<div class="playbackControls playbackControls-play"></div>
+				<div class="playbackControls playbackControls-next"></div>
+			</div>
+			
+			<div class="block-row player-playbackProgress">
+				<div class="playbackProgress playbackProgress-time">-:--</div>
+				<input class="playbackProgress playbackProgress-bar" type="range" min="0" max="100" />
+				<div class="playbackProgress playbackProgress-duration">-:--</div>
+			</div>
+		</div>
+	</div>
+</div>

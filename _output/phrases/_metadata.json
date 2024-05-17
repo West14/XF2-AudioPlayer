@@ -1,0 +1,14 @@
+{
+    "widget_def.wAudioPlayer.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "dfd558ec96fcf02a5d60d7b3d32d52e4"
+    },
+    "widget_def_desc.wAudioPlayer.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "d41d8cd98f00b204e9800998ecf8427e"
+    }
+}

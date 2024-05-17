@@ -1,0 +1,12 @@
+{
+    "public/widget_wap_audio_player.html": {
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "e12ff6a8959aa93f7a34284cb21869d2"
+    },
+    "public/widget_wap_audio_player.less": {
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "bfd7c2f2909ae3bf6a782b22666608ba"
+    }
+}
