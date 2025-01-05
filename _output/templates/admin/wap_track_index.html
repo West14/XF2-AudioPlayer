@@ -1,0 +1,41 @@
+<xf:title>Track list</xf:title>
+
+
+<xf:pageaction>
+    <xf:button icon="sort" href="{{ link('wap-tracks/sort') }}" overlay="true">{{ phrase('sort') }}</xf:button>
+    <xf:button icon="add" href="{{ link('wap-tracks/add') }}" overlay="true">{{ phrase('wap_add_track') }}</xf:button>
+    <xf:button icon="upload" href="{{ link('wap-tracks/upload') }}" overlay="true">{{ phrase('wap_upload_batch') }}</xf:button>
+</xf:pageaction>
+
+<xf:if is="$trackList is empty">
+    <div class="blockMessage">
+        {{ phrase('no_items_have_been_created_yet') }}
+    </div>
+<xf:else />
+    <xf:form action="{{ link('wap-tracks/toggle') }}" class="block" ajax="true">
+        <div class="block-container">
+            <div class="block-body">
+                <xf:datalist>
+                    <xf:datarow rowtype="header">
+                        <xf:cell>{{ phrase('title') }}</xf:cell>
+                        <xf:cell>&nbsp;</xf:cell>
+                        <xf:cell>&nbsp;</xf:cell>
+                    </xf:datarow>
+
+                    <xf:foreach loop="$trackList" value="$track">
+                        <xf:datarow label="{$track.title}"
+                                href="{{ link('wap-tracks/edit', $track) }}"
+                                delete="{{ link('wap-tracks/delete', $track) }}"
+                                hint="{$track.display_order}"
+                        >
+                            <xf:toggle name="active[{$track.track_id}]"	selected="{$track.active}"
+                                       class="dataList-cell--separated" submit="true"
+                                       tooltip="{{ phrase('enable_disable_x', {'title': $track.title}) }}" />
+                        </xf:datarow>
+                    </xf:foreach>
+                </xf:datalist>
+            </div>
+        </div>
+    </xf:form>
+</xf:if>
+

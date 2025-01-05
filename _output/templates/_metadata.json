@@ -1,12 +1,32 @@
 {
+    "admin/wap_track_edit.html": {
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "c4f579a63f84503b784b26e4cf6d84ce"
+    },
+    "admin/wap_track_index.html": {
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "cfe6d0f5a6ce2283077611216e4a9b2b"
+    },
+    "admin/wap_track_sort.html": {
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "964d5087d4dd63c48c522380b3c5644f"
+    },
+    "admin/wap_track_upload.html": {
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "a2776356d98383e209306946ebce83ab"
+    },
     "public/widget_wap_audio_player.html": {
         "version_id": 1000010,
         "version_string": "1.0.0 Alpha",
-        "hash": "e12ff6a8959aa93f7a34284cb21869d2"
+        "hash": "7fd1888419d04c9ad026aa34b9ffd8b0"
     },
     "public/widget_wap_audio_player.less": {
         "version_id": 1000010,
         "version_string": "1.0.0 Alpha",
-        "hash": "bfd7c2f2909ae3bf6a782b22666608ba"
+        "hash": "5bc673614726e7c637faba3ba4e74aa1"
     }
 }

@@ -1,0 +1,28 @@
+<xf:title>{{ phrase('wap_sort_tracks') }}</xf:title>
+
+<xf:macro template="public:nestable_macros" name="setup" />
+
+
+<xf:form action="{{ link('wap-tracks/sort') }}" class="block" ajax="true">
+    <div class="block-container">
+        <div class="block-body">
+            <div class="nestable-container" data-xf-init="nestable" data-max-depth="1" data-value-function="serialize">
+                <xf:macro name="track_list" arg-trackList="{$trackList}" />
+                <xf:hiddenval name="tracks" value="" />
+            </div>
+        </div>
+        <xf:submitrow icon="save" rowtype="simple" />
+    </div>
+</xf:form>
+
+
+<xf:macro name="track_list" arg-trackList="!">
+    <ol class="nestable-list">
+        <xf:foreach loop="$trackList" key="$id" value="$track">
+            <li class="nestable-item" data-id="{$id}">
+                <div class="nestable-handle" aria-label="{{ phrase('drag_handle')|for_attr }}"><xf:fa icon="fa-bars" /></div>
+                <div class="nestable-content">{$track.title}</div>
+            </li>
+        </xf:foreach>
+    </ol>
+</xf:macro>

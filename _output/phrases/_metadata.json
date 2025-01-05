@@ -1,4 +1,64 @@
 {
+    "admin_navigation.wAudioPlayer.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "bbefee629fe65e6c988793e83ee0406a"
+    },
+    "admin_navigation.wapTracks.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "259e64c61d5d1036664ae826072cafc0"
+    },
+    "wap_add_track.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "60e93e0717c1631f6d110e8f8a439dc9"
+    },
+    "wap_edit_track.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "a49135ee4a3172e1d9d4b8b638f607de"
+    },
+    "wap_track_file.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "2870321fb80e520c8f2b40785f18858a"
+    },
+    "wap_track_files.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "290c6ea7a834878bb044800ca73b739f"
+    },
+    "wap_track_name_will_be_taken_from_the_file_name.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "dae9802b7a2043b42d0fe3e7627d1cd0"
+    },
+    "wap_track_upload.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "f12811a941f3e0e1e9a737480b70f3e4"
+    },
+    "wap_upload_batch.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "73ad2f39d6e2b1306fb1c3405852b268"
+    },
+    "wap_you_must_upload_a_file_when_creating_a_new_track.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "a0770efe6db1d854c0d75689c7faed8b"
+    },
     "widget_def.wAudioPlayer.txt": {
         "global_cache": false,
         "version_id": 1000010,

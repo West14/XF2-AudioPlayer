@@ -1,14 +1,19 @@
 {
     "legacy_addon_id": "",
     "title": "[West] Audio Player",
-    "description": "",
+    "description": "Audio player widget",
     "version_id": 1000010,
     "version_string": "1.0.0 Alpha",
-    "dev": "",
+    "dev": "West",
     "dev_url": "",
     "faq_url": "",
     "support_url": "",
     "extra_urls": [],
-    "require": [],
-    "icon": ""
+    "require": {
+        "XF": [
+            2020070,
+            "XenForo 2.2+"
+        ]
+    },
+    "icon": "fas fa-turntable"
 }

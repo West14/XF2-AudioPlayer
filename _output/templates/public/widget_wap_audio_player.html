@@ -1,11 +1,15 @@
-<xf:js src="west/audioplayer/vendor/howler.js" min="1" addon="West/AudioPlayer" />
 <xf:js src="west/audioplayer/player.js" min="1" addon="West/AudioPlayer" />
+<xf:js src="west/audioplayer/volume-tooltip.js" min="1" addon="West/AudioPlayer" />
 
 <xf:css src="widget_wap_audio_player.less" />
 
-<xf:set var="$firstSong" value="{$songList|first}" />
+<xf:set var="$firstTrack" value="{$trackList|first}" />
 
-<div class="block block-audioPlayer"{{ widget_data($widget) }}>
+<script id="wapVolumeTooltipTemplate" type="text/template">
+	<input class="wapVolume-input wap-rangeInput" type="range" min="0" max="100" value="30" />
+</script>
+
+<div class="block block-audioPlayer"{{ widget_data($widget) }} data-xf-init="w-audio-player">
 	<div class="block-container">
 		<h3 class="block-minorHeader menuTrigger" 
 			data-xf-click="menu" 
@@ -13,26 +17,31 @@
 			tabindex="0" 
 			aria-expanded="false" 
 			aria-haspopup="true">
-			{$firstSong.title}
+			{$firstTrack.title}
 		</h3>
-		<div class="menu" data-menu="menu" aria-hidden="true">
+
+		<div class="menu menu-trackChooser" data-menu="menu" aria-hidden="true">
 			<div class="menu-content">
-				<xf:foreach loop="$songList" value="$song" key="$songId">
-					<span class="menu-linkRow" data-song-id="{$songId}" data-song-url="{$song.url}">{$song.title}</span>
+				<xf:foreach loop="$trackList" value="$track" key="$trackId" i="$i">
+					<span class="menu-linkRow menu-trackRow{{ $i == 1 ? ' is-selected' : '' }}" data-track-id="{$trackId}" data-track-url="{$track.url}">{$track.title}</span>
 				</xf:foreach>
 			</div>
 		</div>
 		
-		<div class="block-body">
-			<div class="block-row player-playbackControls">
-				<div class="playbackControls playbackControls-prev"></div>
-				<div class="playbackControls playbackControls-play"></div>
-				<div class="playbackControls playbackControls-next"></div>
+		<div class="block-body audioPlayer">
+			<div class="block-row audioPlayer-playbackControls">
+				<div class="playbackControls playbackControls-loop"></div>
+				<div class="playbackControls playbackControls-group">
+					<div class="playbackControls playbackControls-prev"></div>
+					<div class="playbackControls playbackControls-play"></div>
+					<div class="playbackControls playbackControls-next"></div>
+				</div>
+				<div class="playbackControls playbackControls-volume"></div>
 			</div>
 			
-			<div class="block-row player-playbackProgress">
-				<div class="playbackProgress playbackProgress-time">-:--</div>
-				<input class="playbackProgress playbackProgress-bar" type="range" min="0" max="100" />
+			<div class="block-row audioPlayer-playbackProgress">
+				<div class="playbackProgress playbackProgress-currentTime">-:--</div>
+				<input class="playbackProgress playbackProgress-bar wap-rangeInput" type="range" min="0" max="100" value="0" />
 				<div class="playbackProgress playbackProgress-duration">-:--</div>
 			</div>
 		</div>

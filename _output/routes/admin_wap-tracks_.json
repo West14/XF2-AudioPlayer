@@ -1,0 +1,11 @@
+{
+    "route_type": "admin",
+    "route_prefix": "wap-tracks",
+    "sub_name": "",
+    "format": ":int<track_id>/",
+    "build_class": "",
+    "build_method": "",
+    "controller": "West\\AudioPlayer:Track",
+    "context": "wapTracks",
+    "action_prefix": ""
+}

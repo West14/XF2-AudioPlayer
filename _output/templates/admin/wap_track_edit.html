@@ -1,0 +1,19 @@
+<xf:if is="$track.isInsert()">
+    <xf:title>{{ phrase('wap_add_track') }}</xf:title>
+<xf:else />
+    <xf:title>{{ phrase('wap_edit_track:') }} {$track.title}</xf:title>
+</xf:if>
+
+<xf:form class="block" action="{{ link('wap-tracks/save', $track) }}" upload="true">
+    <div class="block-container">
+        <div class="block-body">
+            <xf:textboxrow name="title" value="{$track.title}" label="{{ phrase('title') }}" />
+
+            <xf:uploadrow name="track" accept="audio/*" label="{{ phrase('wap_track_file') }}" required="{$track.isInsert()}"/>
+
+            <xf:numberboxrow name="display_order" value="{$track.display_order}" label="{{ phrase('display_order') }}" />
+
+            <xf:submitrow icon="save" />
+        </div>
+    </div>
+</xf:form>

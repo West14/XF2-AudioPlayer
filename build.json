@@ -1,0 +1,9 @@
+{
+  "additional_files": [
+    "js/west/audioplayer/"
+  ],
+  "minify": [
+    "js/west/audioplayer/player.js",
+    "js/west/audioplayer/volume-tooltip.js"
+  ]
+}

@@ -1,0 +1,12 @@
+<xf:title>{{ phrase('wap_track_upload') }}</xf:title>
+
+<xf:form action="{{ link('wap-tracks/upload') }}" upload="true" class="block">
+    <div class="block-container">
+        <div class="block-body">
+            <xf:uploadrow name="tracks[]" multiple="multiple" required="required" accept="audio/*"
+                          label="{{ phrase('wap_track_files') }}"
+                          explain="{{ phrase('wap_track_name_will_be_taken_from_the_file_name') }}" />
+        </div>
+        <xf:submitrow icon="upload" submit="{{ phrase('upload') }}" />
+    </div>
+</xf:form>
